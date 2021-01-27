@@ -1,4 +1,4 @@
-package app.cdi.examples;
+package app.cdi.examples.interceptors;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -15,9 +15,6 @@ import java.util.logging.Logger;
 @Named(value = "ex1")
 public class Interceptors1 {
 
-    @Inject
-    Logger logger;
-
     public void hello() {
         System.out.println("Hello");
     }
@@ -25,7 +22,6 @@ public class Interceptors1 {
     // описывается перехватчик для всех методов данного класса
     @AroundInvoke
     public Object logMethod(InvocationContext ic) throws Exception{
-        logger.info("in method");
         System.out.println("intercept '" + ic.getMethod().getName() + "' method");
         System.out.println("arguments: " + Arrays.toString(ic.getMethod().getParameterTypes()));
         return ic.proceed();

@@ -1,4 +1,4 @@
-package app.cdi.app;
+package app.cdi.examples.interceptors;
 
 import javax.interceptor.InterceptorBinding;
 import java.lang.annotation.ElementType;

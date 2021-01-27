@@ -1,9 +1,10 @@
-package app.cdi.examples;
+package app.cdi.examples.interceptors;
 
-import javax.interceptor.Interceptor;
 import javax.interceptor.Interceptors;
 
-
+/**
+ * указываем конкретный клаcс перехватчика
+ */
 @Interceptors(Interceptors2.class)
 public class ExForInterceptor {
 

@@ -5,8 +5,7 @@ import javax.interceptor.Interceptor;
 import javax.interceptor.InvocationContext;
 import java.util.logging.Logger;
 
-@Interceptor
-@Loggable
+
 public class LoggingInterceptor {
 
     @Inject
