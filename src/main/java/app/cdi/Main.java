@@ -1,5 +1,6 @@
 package app.cdi;
 
+import app.cdi.app.BookService;
 import app.cdi.examples.eventApi.EventProducer;
 import org.jboss.weld.environment.se.Weld;
 import org.jboss.weld.environment.se.WeldContainer;
@@ -21,9 +22,14 @@ public class Main {
 //        ExForInterceptor2 exForInterceptor2 = container.instance().select(ExForInterceptor2.class).get();
 //        exForInterceptor2.test();
 
-        EventProducer eventProducer = container.instance().select(EventProducer.class).get();
-        eventProducer.createBook();
-        eventProducer.createBook2();
+//        EventProducer eventProducer = container.instance().select(EventProducer.class).get();
+//        eventProducer.createBook();
+//        eventProducer.createBook2();
+
+    // test App
+
+        BookService bookService = container.instance().select(BookService.class).get();
+        System.out.println(bookService.createBook("H2G2", 12, "some desc"));
 
         weld.shutdown();
     }

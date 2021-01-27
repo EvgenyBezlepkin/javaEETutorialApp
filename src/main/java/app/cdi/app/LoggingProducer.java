@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 public class LoggingProducer {
 
     @Produces
-    public Logger prosuceLogger(InjectionPoint ip) {
+    public Logger produceLogger(InjectionPoint ip) {
         return Logger.getLogger(ip.getMember().getDeclaringClass().getName());
     }
 }

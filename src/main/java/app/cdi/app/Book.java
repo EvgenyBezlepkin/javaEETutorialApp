@@ -59,4 +59,14 @@ public class Book {
     public void setNumber(String number) {
         this.number = number;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", price=" + price +
+                ", desc='" + desc + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
 }

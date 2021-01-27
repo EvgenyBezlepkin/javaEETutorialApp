@@ -6,6 +6,7 @@
 
     <interceptors>
         <class>app.cdi.examples.interceptors.Interceptors3</class>
+        <class>app.cdi.app.LoggingInterceptor</class>
     </interceptors>
 
 </beans>

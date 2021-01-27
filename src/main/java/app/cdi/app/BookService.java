@@ -2,6 +2,7 @@ package app.cdi.app;
 
 import javax.inject.Inject;
 
+@LoggableForApp
 public class BookService {
 
     @Inject @ThirteenDigits
